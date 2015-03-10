@@ -1,0 +1,65 @@
+//Nathaniel D. Smith
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay</title>
+
+	<script type="text/javascript" >
+
+	function calc_pay()
+	{
+
+
+		var hours = document.getElementById('hours').value;
+
+		var taxes = .25;
+
+		var dependents = document.getElementById('dep').value;
+
+		var grosspay = hours * 12.50;
+
+		var netpay = grosspay - (grosspay * taxes);
+
+
+		if ( hours < 0 || dependents < 0 || hours === "")
+		{
+			  alert("Invalid input");
+		}
+		else if((dependents = 0) || (dependents = 1) ) {
+			  	taxes = 0.25;
+			  }
+
+			 else if ((dependents = 2) || (dependents = 3) ){
+
+			   	taxes = 0.20;
+			  }
+
+			  else if (dependents >= 3 )
+			  {
+			  	taxes = 0.10;
+			  }
+				document.getElementById('p1').innerHTML= "hours :" + hours;
+				document.getElementById('p2').innerHTML= "grosspay :" + grosspay;
+				document.getElementById('p3').innerHTML= "netpay :" + netpay;
+
+
+
+	}
+		</script>
+
+</head>
+
+<body>
+<p>Enter a number hours worked : <input type='text' name='hours' id='hours' /></p>
+<p>Enter a number of dependents : <input type='text' name='dep' id='dep' /></p>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p><input type='button' name='add' value='check the gross pay' onclick='calc_pay();'/></p>
+
+
+
+</body>
+</html>
