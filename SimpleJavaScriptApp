@@ -1,0 +1,40 @@
+//Nathaniel D. Smith
+//Date:9/4/13
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Javascript application</title>
+
+
+	<script type="text/javascript" >
+
+	  function calc_area() {
+
+	    // read height as integer use parseInt
+	    var height = parseInt(document.getElementById('len').value); //reading the value from a txt bx
+
+	    //read width as real number parseFloat
+	    var width = parseFloat(document.getElementById('wdth').value);
+
+	    //find area
+	    var area = height + width;//be careful using the plus sign
+
+		document.getElementById('p1').innerHTML= "Area :" +area;
+	  }
+	</script>
+
+</head>
+
+<body>
+<p>Height:<input type='text' name='len' id='len' /></p>
+<p>Width:<input type='text' name='wdth' id='wdth' /></p>
+
+
+
+<p id="p1"></p>
+<p><input type='button' name='add' value='Find Area' onclick='calc_area();'/></p>
+
+
+
+</body>
+</html>
