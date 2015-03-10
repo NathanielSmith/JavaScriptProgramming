@@ -1,0 +1,59 @@
+//Nathaniel D. Smith
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Conversion</title>
+
+
+</head>
+<body>
+<h2>Temperature Conversion</h2>
+
+<p><input type='text' name='temp'  id='temp' />
+	<input type='button' name='f_to_c' id='f_to_c'
+	 value= "F to C" onlick= 'convertFtoC();' />
+
+	 <input type='button' name='c_to_f' id='c_to_f'
+	 	 value= "C to F" onclick= 'convertFtoC();' />
+
+
+</p>
+<p id='result'></p>
+
+<script type= 'text/javascript'>
+	document.getElementById('f_to_c').onclick = function () {
+//read the value
+
+	var num = document.getElementById('temp').value;
+//convert to Celsius
+
+	var cvalue = (num - 32)* 5/9;
+	//display result
+	//format the output
+	msg = num + "\xb0F = " + cvalue + "\xb0C";
+
+	document.getElementById('result').innerHTML = msg;
+
+}
+
+document.getElementById('c_to_f').onclick = function () {
+//read the value
+
+	var num = document.getElementById('temp').value;
+//convert to Celsius
+
+	var fvalue = (num * 9/5) + 32;
+	//display result
+	//format the output
+	msg = num + "\xb0C = " + fvalue + "\xb0F";
+
+	document.getElementById('result').innerHTML = msg;
+
+}
+
+</script>
+
+</body>
+</html>
+
