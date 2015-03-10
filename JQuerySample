@@ -1,0 +1,35 @@
+//Nathaniel D. Smith
+
+<!doctype html>
+<html>
+	<head>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+
+			// your programming goes here
+ 			//$("#id") this is like the doc.getElementById("id")
+
+ 			$("#p1").html("This is a test!" );
+
+			$("#clickme").click( function(){
+				alert("jQuery is fun!!!");
+
+	});
+
+});
+  		</script>
+
+	</head>
+
+<body>
+<!-- HTML content -->
+<p> My first jQuery script</p>
+<p id='p1'></p>
+<p id='p2'></p>
+<p><input type='button' value='Click Me' id= 'clickme' /> </p>
+</body>
+</html>
