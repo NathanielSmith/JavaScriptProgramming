@@ -1,0 +1,72 @@
+//Nathaniel D. Smith
+
+<html>
+
+<style type- "test/css">
+p { color: #666699;}
+
+</style>
+</head>
+
+<body>
+<p>Temperature Convert<?p>
+<p> Enter an integer: <input type='text' name='temperature' id='temperature'/>
+
+<p><input type='text' name='temperature' id='temperature' />
+	<input type='button' id='f_to_c' value="F to C" />
+	<input type='button' id='c_to_f' value='C to F' />
+</p>
+	<p id='result'></p>
+<p>Thanks for using this application</p>
+<p> Have a nice day!</p>
+<script>
+
+
+document.getElementById('f_to_c').onclick = function(){
+
+	var num = document.getElementById('temperature').value;
+	if (isNaN (num))
+		alert("It is not a number");
+	else if (num % 1 !=0)
+		alert("It is not an integer");
+	else { //calc and display result
+
+
+	var value = (num -32)/1.8;
+document.getElementById('result').innerHTML = num + "\xb0C = " + value.toFixed(2) +
+"\xb0F";
+
+  } //end if
+
+};
+
+document.getElementById('c_to_f').onclick = function(){
+	var num = document.getElementById('temperature').value;
+	if (num == "" || isNaN(num) || (num % 1 !=0))
+		alert("invalid input!! Enter an integer");
+	else {
+	var value = 1.8*num + 32;
+document.getElementById('result').innerHTML = num + "\xb0F = " + value.toFixed(2) +
+"\xb0C";
+
+}
+};
+
+</script>
+<p> <input type= 'button' value= "change color" id= "clickme" /></p>
+
+<script>
+	document.getElementById("clickme").onclick = function(){
+	//Identify all p tags , change font color to red
+		var items = document.getElementsByTagName('p');
+		for (i=0; i<items.length; i++){ // in IE
+			//chnge font color
+			items[i].style.color = "red";
+	}
+
+
+
+	}
+</script>
+	</body>
+	</html>
