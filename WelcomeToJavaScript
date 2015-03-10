@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Javascript application</title>
+
+
+	<script type="text/javascript" >
+
+	  function change_me() {
+		document.getElementById('p1').innerHTML="New Item";
+	  }
+	</script>
+
+</head>
+
+<body>
+<h2>Welcome to Javascript</h2>
+
+<h4>Have a nice day</h4>
+
+<p id="p1"></p>
+<p><input type='button' name='add' value='Change Me' onclick='change_me();'/></p>
+
+
+
+</body>
+</html>
