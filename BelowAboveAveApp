@@ -1,0 +1,41 @@
+//Nathaniel D. Smith 
+//Date: 9/9/13
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Javascript application</title>
+
+
+	<script type="text/javascript" >
+
+	  function calc_area() {
+
+	    // read the value
+	    var thisNumber = document.getElementById('len').value; //reading the value from a txt bx
+
+		if (thisNumber > 100 ||  thisNumber < 0){
+			alert ("Invalid input");
+		}else if (thisNumber < 70 ){
+		alert("Below Average");
+		}else {
+		alert("Above Average");
+		}
+
+	  }
+	</script>
+
+</head>
+
+<body>
+<p>Enter a number between 0 and 100 : <input type='text' name='len' id='len' /></p>
+
+
+
+
+<p id="p1"></p>
+<p><input type='button' name='add' value='check the input' onclick='calc_area();'/></p>
+
+
+
+</body>
+</html>
