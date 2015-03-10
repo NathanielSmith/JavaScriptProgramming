@@ -1,0 +1,40 @@
+//Nathaniel D. Smith
+
+<!doctype html>
+<html>
+	<head>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+			$("#evalMe").click(function(){
+
+			try{
+				var this_str = $("#testcode").val(); //use this as a template for Prj2
+													//var this_str = $("id").val();
+													//newvalue = oldvalue + this_str
+													//$("#display").val(new value)
+					this_str = eval(this_str);
+					alert(this_str);
+				}catch (e) {
+					//display an error message
+					alert("Invalid Javascript code!");
+				}
+
+  });
+});
+
+</script>
+<html>
+<body>
+
+<h2>Test JavaScript code </h2>
+
+<textarea id='testcode' rows='10' cols='50'></textarea>
+<p><input type ='button' value="evaluate" id="evalMe"> </p>
+</body>
+</html>
+
+
+
