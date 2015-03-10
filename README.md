@@ -1,2 +1,3 @@
 # JavaScriptProgramming
-A place for JavaScript programming. 
+A place for JavaScript and jQuery programming. 
+Thank you!
