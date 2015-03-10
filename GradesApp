@@ -1,0 +1,63 @@
+//Nathaniel D. Smith
+//Date: 9/9/13
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grades Application</title>
+
+
+	<script type="text/javascript" >
+
+	function calc_points()
+	{
+
+		var points = document.getElementById('p').value;
+
+
+
+		if ( points > 300 || points < 0 || points == "")
+		{
+			  alert("Invalid input");
+		}
+		else
+		{
+			  if (points >= 270)
+			  {
+			  	alert("Grade of A");
+			  }
+			  else if (points >= 240)
+			  {
+				alert("Grade of B");
+			  }
+			  else if (points >= 210)
+			  {
+				alert("Grade of C");
+			  }
+			  else if (points >= 180)
+			  {
+			  	alert("Grade of D");
+			  }
+			  else
+			  {
+			  	alert("Grade of F");
+			  }
+		}
+	}
+		</script>
+
+</head>
+
+<body>
+<p>Enter a number between 0 and 300 : <input type='text' name='p' id='p' /></p>
+
+
+
+
+<p id="p"></p>
+<p><input type='button' name='add' value='check the input' onclick='calc_points();'/></p>
+
+
+
+</body>
+</html>
